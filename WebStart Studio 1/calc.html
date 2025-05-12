@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор реклами</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-PNL84GTKES');
+    </script>
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGMWZKLK" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <h1>Розрахунок вартості реклами<br>(нашими сторінками)</h1>
+
+    <div class="form-group">
+        <label for="days">Кількість днів реклами:</label>
+        <input type="number" id="days" value="10" min="1">
+    </div>
+
+    <div class="form-group">
+        <label for="ad-budget">
+            Бюджет на рекламу (грн за день) — <span style="font-weight: normal; font-size: 0.9em;">рекомендуємо від 100
+                грн</span>:
+        </label>
+        <input type="number" id="ad-budget" value="100" min="0">
+    </div>
+
+    <div class="form-group">
+        <label for="my-fee">Вартість за наші послуги (грн):</label>
+        <input type="text" id="my-fee" value="750" disabled>
+    </div>
+
+    <div class="form-group">
+        <label for="total">Загальна сума до сплати (грн):</label>
+        <input type="text" id="total" value="1750" disabled>
+    </div>
+
+    <button type="button" onclick="calculate()">Розрахувати</button>
+
+
+    <div class="result" id="result"></div>
+
+    <button onclick="goBack()">Назад на головну</button>
+
+</body>
+
+</html>
